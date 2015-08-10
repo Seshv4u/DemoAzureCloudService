@@ -28,7 +28,7 @@ namespace Slave
         public override bool OnStart()
         {
             // Set the maximum number of concurrent connections
-            ServicePointManager.DefaultConnectionLimit = 12;z
+            ServicePointManager.DefaultConnectionLimit = 12;
 
             // For information on handling configuration changes
             // see the MSDN topic at http://go.microsoft.com/fwlink/?LinkId=166357.
@@ -56,6 +56,7 @@ namespace Slave
         private async Task RunAsync(CancellationToken cancellationToken)
         {
             // TODO: Replace the following with your own logic.
+            //TODO: Added small change - Seshu
             while (!cancellationToken.IsCancellationRequested)
             {
                 Trace.TraceInformation("Working");
